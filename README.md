@@ -14,6 +14,7 @@ is a beyond version, and both versions will exist on the same repository. Here a
 - Users have the ability to either use clang/llvm, tcc, cproc, etc if they so chose. Some packages (the linux kernel) will only be able to be compiled with the bloated compiler, and it will be specified which packages.
 - Controversely, the guide will provide build guides for Xlibre, say how you will, I won't provide build guides on a dead project. If you don't like Xlibre, the alternative (which I will do) is TinyX.
 - On the same topic as above, **NO** wayland. Either build for one server or the other, both are bloated, having both is worse than having one. Also too lazy to provide more support across multiple display servers.
+- **NO** dbus, and hence wayland support goes down the drain. [We don't need another IPC system](https://forum.artixlinux.org/index.php/topic,3431.0.html).
 - There is a more suckless part of the guide, and a more bloated suckful part (firefox, gcompat, gaming, discord, etc)
 - On coreutils, ubase and sbase are great, but I will provide other alternative builds (toybox, busybox, etc.)
 - Other core components: sinit (will provide scripts and other goodies), sdhcp, smdev (alternatives: mdev, mdevd, or oasis approach of none), [eiwd](https://github.com/illiliti/eiwd) (or wpa_supplicant) for wireless networking, etc.
@@ -25,7 +26,8 @@ While I love oasis linux and what it does, there are a
 bit of downsides in using oasis (I mean duh), but it's goal of creating a small static distro is extremely honorable. For one, I felt
 like it's deviation to using a package manager for everything else kinda sucks (pkgmgr & nix), but yeah maintaining such a huge amount of packages sucks,
 which is entirely understandable. Secondly, say how you will, but I don't like wayland, yes it might be "slim", but that's only the protocol;
-Xorg is not perfect, but it's a hell of a lot flexible, doesn't break everything, and actually works (also I want to use dwm). Thirdly,
+Xorg is not perfect, but it's a hell of a lot flexible, [doesn't break everything](https://gist.github.com/probonopd/9feb7c20257af5dd915e3a9f2d1f2277), and actually works (also I want to use dwm). 
+Suckless isn't about the smallest codebase only, but about balance of codebase and features, wayland is [too minimal](https://lists.suckless.org/dev/2109/34475.html). Thirdly,
 it's boring to have everything automated, that's why I love LFS, but oasis doesn't scratch that itch for me. I want a comprehensible guide
 on building it from scratch, not everything being automated with scripts (or well, except for Xorg lol).
 
