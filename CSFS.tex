@@ -1,0 +1,72 @@
+\documentclass[12pt,a4paper, margin=0in]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage{fancyvrb}
+\usepackage{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{subfiles} % Multi-file project
+
+\linespread{1.5}
+\setlength{\parindent}{1.25cm}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Linux From Scratch}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% uses roman numbers on the pages before the document begins
+\newcommand{\pretextual}{
+  \cleardoublepage
+  \pagenumbering{roman}
+}
+\newcommand{\textual}{
+  \cleardoublepage
+  \pagenumbering{arabic}
+}
+
+% Chapter numeration
+\titleformat{\chapter}[hang]{\normalfont\huge\bfseries}{\thechapter.}{1em}{}
+\titleformat{name=\chapter,numberless}[hang]{\normalfont\huge\bfseries}{}{0pt}{}
+
+\setlength{\headheight}{26.35pt}
+
+% custom commands
+\newcommand{\code}[1]{\texttt{\colorbox{lightgray}{\textcolor{black}{#1}}}}
+
+\begin{document}
+
+%----------------------------
+% Cover
+%----------------------------
+\begin{titlepage}
+    \centering
+    \vfill
+    {\Huge\textbf{Suckless From Scratch\\Version 0.1\\\large Published (placeholder)}}\\
+    \vfill
+    {\large\textbf{Created by Cowmonk}}\\
+    \vfill
+\end{titlepage}
+
+%----------------------------
+%  stuff before the docuemnt (Preface, index...)
+%----------------------------
+\pretextual
+
+\tableofcontents
+\cleardoublepage
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+
+
+\end{document}
